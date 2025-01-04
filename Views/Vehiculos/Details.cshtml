@@ -1,0 +1,67 @@
+﻿@model Pr_Concesionaria.Models.Vehiculo
+
+@{
+    ViewData["Title"] = "Detalles del Vehículo";
+    <link rel="stylesheet" href="~/css/details.css" asp-append-version="true" />
+}
+
+<h1 class="page-title">Detalles del Vehículo</h1>
+
+<div class="vehicle-details">
+    <h4 class="section-title">Información del Vehículo</h4>
+    <hr />
+    <dl class="detail-list">
+        <div class="detail-row">
+            <dt class="detail-label">Modelo:</dt>
+            <dd class="detail-value">@Html.DisplayFor(model => model.Modelo)</dd>
+        </div>
+
+        <div class="detail-row">
+            <dt class="detail-label">Marca:</dt>
+            <dd class="detail-value">@Html.DisplayFor(model => model.Marca)</dd>
+        </div>
+
+        <div class="detail-row">
+            <dt class="detail-label">Tipo de Combustible:</dt>
+            <dd class="detail-value">@Html.DisplayFor(model => model.TipoCombustible)</dd>
+        </div>
+
+        <div class="detail-row">
+            <dt class="detail-label">Transmisión:</dt>
+            <dd class="detail-value">@Html.DisplayFor(model => model.Transmision)</dd>
+        </div>
+
+        <div class="detail-row">
+            <dt class="detail-label">Categoría:</dt>
+            <dd class="detail-value">@Html.DisplayFor(model => model.Categoria)</dd>
+        </div>
+
+        <div class="detail-row">
+            <dt class="detail-label">Color:</dt>
+            <dd class="detail-value">@Html.DisplayFor(model => model.Color)</dd>
+        </div>
+
+        <div class="detail-row">
+            <dt class="detail-label">Precio:</dt>
+            <dd class="detail-value">$ @Html.DisplayFor(model => model.Precio)</dd>
+        </div>
+
+        <div class="detail-row">
+            <dt class="detail-label">Stock:</dt>
+            <dd class="detail-value">@Html.DisplayFor(model => model.Stock)</dd>
+        </div>
+    </dl>
+</div>
+
+<div class="actions">
+    <a href="@Url.Action("ListadoVehiculos")" class="btn-back">Volver</a>
+</div>
+
+<br />
+<br />
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

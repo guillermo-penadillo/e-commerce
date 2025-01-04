@@ -1,0 +1,61 @@
+﻿.page-title {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.vehicle-details {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.section-title {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.detail-list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.detail-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+}
+
+.detail-label {
+    flex: 0 0 30%;
+    font-weight: bold;
+    color: #555;
+}
+
+.detail-value {
+    flex: 0 0 65%;
+    color: #444;
+}
+
+.actions {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.btn-back {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+    .btn-back:hover {
+        background-color: #0056b3;
+    }

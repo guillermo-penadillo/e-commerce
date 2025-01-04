@@ -1,0 +1,45 @@
+﻿@model Pr_Concesionaria.Models.Usuario
+
+@{
+    ViewData["Title"] = "Login";
+    Layout = null;
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+}
+
+<div class="d-flex justify-content-center align-items-center vh-100 bg-light">
+    <div class="card shadow-lg" style="width: 24rem;">
+        <div class="card-body">
+            <h3 class="card-title text-center mb-4">Iniciar Sesión</h3>
+            <hr />
+            <form asp-action="Login">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                <!-- Nombre de Usuario -->
+                <div class="form-group mb-3">
+                    <label asp-for="NombreUsuario" class="form-label">Usuario</label>
+                    <input asp-for="NombreUsuario" class="form-control" placeholder="Ingrese su usuario" />
+                    <span asp-validation-for="NombreUsuario" class="text-danger"></span>
+                </div>
+
+                <!-- Contraseña -->
+                <div class="form-group mb-3">
+                    <label asp-for="Password" class="form-label">Contraseña</label>
+                    <input asp-for="Password" class="form-control" type="password" placeholder="Ingrese su contraseña" />
+                    <span asp-validation-for="Password" class="text-danger"></span>
+                </div>
+
+                <!-- Botón de Inicio de Sesión -->
+                <div class="d-grid">
+                    <input type="submit" value="Iniciar Sesión" class="btn btn-primary btn-block" />
+                </div>
+            </form>
+        </div>
+
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
